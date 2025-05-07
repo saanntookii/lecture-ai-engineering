@@ -6,11 +6,10 @@ import time
 # ============================================
 # ページ設定
 # ============================================
-# st.set_page_config(
-#     page_title="Streamlit デモ",
-#     layout="wide",
-#     initial_sidebar_state="expanded"
-# )
+st.set_page_config(
+    page_title="Streamlit デモ",
+    layout="wide",
+    initial_sidebar_state="expanded" )
 
 # ============================================
 # タイトルと説明
@@ -36,9 +35,9 @@ name = st.text_input("あなたの名前", "ゲスト")
 st.write(f"こんにちは、{name}さん！")
 
 # ボタン
-# st.subheader("ボタン")
-# if st.button("クリックしてください"):
-#     st.success("ボタンがクリックされました！")
+st.subheader("ボタン")
+if st.button("クリックしてください"):
+    st.success("ボタンがクリックされました！")
 
 # チェックボックス
 # st.subheader("チェックボックス")
@@ -51,27 +50,26 @@ st.write(f"こんにちは、{name}さん！")
 # st.write(f"あなたの年齢: {age}")
 
 # セレクトボックス
-# st.subheader("セレクトボックス")
-# option = st.selectbox(
-#     "好きなプログラミング言語は?",
-#     ["Python", "JavaScript", "Java", "C++", "Go", "Rust"]
-# )
-# st.write(f"あなたは{option}を選びました")
+st.subheader("セレクトボックス")
+option = st.selectbox(
+    "好きなプログラミング言語は?",
+    ["Python", "JavaScript", "Java", "C++", "Go", "Rust"] )
+st.write(f"あなたは{option}を選びました")
 
 # ============================================
 # レイアウト
 # ============================================
-# st.header("レイアウト")
+st.header("レイアウト")
 
 # カラム
-# st.subheader("カラムレイアウト")
-# col1, col2 = st.columns(2)
-# with col1:
-#     st.write("これは左カラムです")
-#     st.number_input("数値を入力", value=10)
-# with col2:
-#     st.write("これは右カラムです")
-#     st.metric("メトリクス", "42", "2%")
+st.subheader("カラムレイアウト")
+col1, col2 = st.columns(2)
+with col1:
+    st.write("これは左カラムです")
+    st.number_input("数値を入力", value=10)
+with col2:
+    st.write("これは右カラムです")
+    st.metric("メトリクス", "42", "2%")
 
 # タブ
 # st.subheader("タブ")
